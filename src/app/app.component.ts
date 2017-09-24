@@ -7,7 +7,16 @@ import { Component } from '@angular/core';
 //  template: '<h1>fucker {{ hacker + title }}</h1>'
 })
 export class AppComponent {
-  title = 'Employee details'
+  title = 'Employee details';
+
+  //interpolation example
+
+  /*firstName = 'tom';
+  lastName = 'hoppkins';
+
+  getFullname(): any {
+    return this.firstName+''+this.lastName;
+  }*/
 
 }
 
