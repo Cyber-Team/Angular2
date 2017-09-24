@@ -18,6 +18,8 @@ export class AppComponent {
     return this.firstName+''+this.lastName;
   }*/
 
+  //fucker = 'hac';
+
 }
 
 
