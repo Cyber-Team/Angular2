@@ -9,9 +9,16 @@ export class EmployeComponent implements OnInit {
 
   firstname = "krishna";
   lastname = "kondoju";
+  Gender = "male";
+  age = "30";
+  showDetails: boolean = true;
 
-  classToApply: string = 'col-1';
-  attrToApply: boolean = true;
+  toggleDetails(): void{
+    this.showDetails = !this.showDetails;
+  }
+
+  //classToApply: string = 'col-1';
+  //attrToApply: boolean = true;
 /*
 addTo(){
   let classes = {
@@ -19,6 +26,12 @@ addTo(){
   };
   return classes;
 }*/
+
+ /* onclick(){
+    alert("awsome")
+  }*/
+
+
   constructor() { }
 
   ngOnInit() {

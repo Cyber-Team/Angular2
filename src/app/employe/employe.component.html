@@ -9,7 +9,19 @@
     <td>{{ lastname }}</td>
 
   </tr>
+  <tr *ngIf="showDetails">
+    <td>Gender</td>
+    <td>{{ Gender }}</td>
+
+  </tr>
+  <tr *ngIf="showDetails">
+    <td>Age</td>
+    <td>{{ age }}</td>
+
+  </tr>
 </table>
+
+<button (click)="toggleDetails()">{{showDetails ? 'Hide': 'show'}} details</button>
 
 <!--
 
@@ -20,3 +32,4 @@
 
 <button [class]="classToApply" [ngClass]="addTo()" >Submit</button>
 -->
+<!--<button (click)="onclick()" >Click</button>-->
