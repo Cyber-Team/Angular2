@@ -33,9 +33,9 @@ addTo(){
 
    //two way data binding
 
-  name: string = 'krishna';
+  //name: string = 'krishna';
 
-
+//ngFor
 
 
 

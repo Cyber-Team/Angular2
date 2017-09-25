@@ -37,11 +37,14 @@
 <!--<button (click)="onclick()" >Click</button>-->
 
 <!--two way data binding-->
-<input type="text" [value]="name" (input)="name=$event.target.value"/>
+<!--<input type="text" [value]="name" (input)="name=$event.target.value"/>
 <br/>
 You entered: {{ name }}
 <br/>
 <input [(ngModel)]="name"/>
 <br/>
-You entered: {{ name }}
+You entered: {{ name }}-->
 
+<!--ngFor directive-->
+
+<app-employee-list></app-employee-list>
