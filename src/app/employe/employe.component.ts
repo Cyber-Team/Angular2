@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeComponent implements OnInit {
 
-  firstname = "krishna";
+  /*firstname = "krishna";
   lastname = "kondoju";
   Gender = "male";
   age = "30";
@@ -15,7 +15,7 @@ export class EmployeComponent implements OnInit {
 
   toggleDetails(): void{
     this.showDetails = !this.showDetails;
-  }
+  }*/
 
   //classToApply: string = 'col-1';
   //attrToApply: boolean = true;
@@ -30,6 +30,22 @@ addTo(){
  /* onclick(){
     alert("awsome")
   }*/
+
+   //two way data binding
+
+  name: string = 'krishna';
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   constructor() { }

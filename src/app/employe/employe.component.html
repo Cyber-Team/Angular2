@@ -1,8 +1,8 @@
+<!--
 <table>
   <tr>
     <td>Firstname</td>
     <td>{{ firstname }}</td>
-
   </tr>
   <tr>
     <td>Lastname</td>
@@ -20,8 +20,10 @@
 
   </tr>
 </table>
-
+-->
+<!--
 <button (click)="toggleDetails()">{{showDetails ? 'Hide': 'show'}} details</button>
+-->
 
 <!--
 
@@ -33,3 +35,13 @@
 <button [class]="classToApply" [ngClass]="addTo()" >Submit</button>
 -->
 <!--<button (click)="onclick()" >Click</button>-->
+
+<!--two way data binding-->
+<input type="text" [value]="name" (input)="name=$event.target.value"/>
+<br/>
+You entered: {{ name }}
+<br/>
+<input [(ngModel)]="name"/>
+<br/>
+You entered: {{ name }}
+
