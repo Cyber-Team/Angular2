@@ -4,16 +4,27 @@
       <th>code</th>
       <th>name</th>
       <th>gender</th>
+      <th>Index</th>
+      <th>First</th>
+      <th>Last</th>
+      <th>even</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let employee of employe">
+    <tr *ngFor="let employee of employe; trackBy:trackByEmpCode; let i=index; let isFirst=first; let isLast=last;
+     let isEven=even">
         <td> {{employee.code}}</td>
         <td> {{employee.gender}}</td>
         <td> {{employee.name}}</td>
+      <td>{{ i }}</td>
+      <td>{{ isFirst}}</td>
+      <td>{{ isLast}}</td>
+      <td>{{ isEven }}</td>
     </tr>
   <tr *ngIf="!employe || employe.length==0">
     <td>No employees to display</td>
   </tr>
   </tbody>
 </table>
+<br/>
+<button (click)="getEmploye()">Refresh</button>
