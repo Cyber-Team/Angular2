@@ -39,15 +39,6 @@ addTo(){
 
 
 
-
-
-
-
-
-
-
-
-
   constructor() { }
 
   ngOnInit() {
