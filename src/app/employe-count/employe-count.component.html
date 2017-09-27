@@ -1,5 +1,8 @@
 Show:
 
-<input type="radio" name="gender" value="female"> All ({{ all }}) <br>
-<input type="radio" name="gender" value="female"> male ({{ male }})<br>
-<input type="radio" name="gender" value="female"> Female ({{ female }})<br>
+<input type="radio" name="gender" value="All" [(ngModel)]="selectRadioButtonValue"
+(change)="OnRadioButtonChange()"> All ({{ all }}) <br>
+<input type="radio" name="gender" value="male" [(ngModel)]="selectRadioButtonValue"
+       (change)="OnRadioButtonChange()"> male ({{ male }})<br>
+<input type="radio" name="gender" value="female" [(ngModel)]="selectRadioButtonValue"
+       (change)="OnRadioButtonChange()"> Female ({{ female }})<br>

@@ -7,12 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeListComponent implements OnInit {
   employe: any[];
-
+  //selectedEmployeCount: string = 'All';
   constructor() {
     this.employe = [
-    { code: 'em101', name: 'Tom', gender:'Male'},
-    { code: 'em102', name: 'Alex', gender:'Male'},
+    { code: 'em101', name: 'Tom', gender:'male'},
+    { code: 'em102', name: 'Alex', gender:'male'},
     { code: 'em103', name: 'Thom', gender:'female'},
+
       { code: 'em104', name: 'hom', gender:'male'}
   ];
   }
@@ -28,6 +29,18 @@ export class EmployeeListComponent implements OnInit {
   /*trackByEmpCode(index:number, employe: any): string{
     return employe.code;
   }*/
+
+  getTotalEmployeCount(): number{
+    return this.employe.length;
+  }
+
+  TotalNumberOfMale(): number{
+    return this.employe.filter(e => e.gender === "male").length;
+  }
+  TotalNumberOfFeMale(): number{
+    return this.employe.filter(e => e.gender === "female").length;
+  }
+
 
   ngOnInit() {
   }
