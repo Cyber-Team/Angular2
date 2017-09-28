@@ -1,21 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { IEmployee } from './employee';
+//import {EmployeeService } from './employee.service';
 @Component({
   selector: 'app-employee-list',
   templateUrl: './employee-list.component.html',
   styleUrls: ['./employee-list.component.css']
 })
 export class EmployeeListComponent implements OnInit {
-  employe: IEmployee[];
+  employe: any[];
+
   //selectedEmployeCount: string = 'All';
   constructor() {
     this.employe = [
-    { code: 'em101', name: 'Tom', gender:'male'},
-    { code: 'em102', name: 'Alex', gender:'male'},
-    { code: 'em103', name: 'Thom', gender:'female'},
-
+      { code: 'em101', name: 'Tom', gender:'Male'},
+      { code: 'em102', name: 'Alex', gender:'Male'},
+      { code: 'em103', name: 'Thom', gender:'female'},
       { code: 'em104', name: 'hom', gender:'male'}
-  ];
+
+    ];
   }
   /*getEmploye() : void{
     this.employe = [
