@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeListComponent implements OnInit {
   employe: any[];
-
   //selectedEmployeCount: string = 'All';
   constructor() {
     this.employe = [
@@ -41,7 +40,6 @@ export class EmployeeListComponent implements OnInit {
   TotalNumberOfFeMale(): number{
     return this.employe.filter(e => e.gender === "female").length;
   }
-
 
   ngOnInit() {
   }
