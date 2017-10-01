@@ -4,6 +4,7 @@ import { Observable} from "rxjs/Observable";
 import 'rxjs/add/operator/map';
 @Injectable()
 export class EmployeeService {
+  /*http request*/
   /* constructor(private _http: Http){}
 
   getEmployees(): Observable<IEmployee[]>{
