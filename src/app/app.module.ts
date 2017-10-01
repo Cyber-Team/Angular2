@@ -7,7 +7,7 @@ import { EmployeComponent } from './employe/employe.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeTitlePipePipe } from './employee-title-pipe.pipe';
 import { EmployeCountComponent } from './employe-count/employe-count.component';
-
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
@@ -22,7 +22,8 @@ import { EmployeCountComponent } from './employe-count/employe-count.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

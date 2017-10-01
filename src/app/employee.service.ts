@@ -1,8 +1,17 @@
 import { Injectable } from '@angular/core';
-
+import { Http, Response } from '@angular/http';
+import { Observable} from "rxjs/Observable";
+import 'rxjs/add/operator/map';
 @Injectable()
 export class EmployeeService {
-   getEmployees(){
+
+  /* constructor(private _http: Http){}
+
+  getEmployees(): Observable<IEmployee[]>{
+     return this._http.get("")
+       .map((response: Response)=> <IEmployee[]>response.json())
+  }*/
+  /* getEmployees(){
      return[
        { code: 'em101', name: 'Tom', gender:'male'},
        { code: 'em102', name: 'Alex', gender:'male'},
@@ -10,6 +19,6 @@ export class EmployeeService {
        { code: 'em104', name: 'hom', gender:'male'}
      ]
    }
-  constructor() { }
+*/
 
 }

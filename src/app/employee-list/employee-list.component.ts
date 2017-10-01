@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Http} from '@angular/http';
+
 //import {EmployeeService } from './employee.service';
 @Component({
   selector: 'app-employee-list',
@@ -8,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class EmployeeListComponent implements OnInit {
   employe: any[];
   //selectedEmployeCount: string = 'All';
-  constructor() {
+  constructor( ) {
     this.employe = [
       { code: 'em101', name: 'Tom', gender:'Male'},
       { code: 'em102', name: 'Alex', gender:'Male'},
