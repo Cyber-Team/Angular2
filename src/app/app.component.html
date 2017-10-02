@@ -9,7 +9,17 @@
     <!--<input id="details" value="Tom"/>  to check this use details.getAttribute('value');-->
   </h1>
 
-  <app-employe></app-employe>
+
+  <ul class="nav nav-tabs">
+    <li routerLinkActive="active"><a  routerLink="home">Home</a> </li>
+    <li routerLinkActive="active"><a routerLink="about">about</a> </li>
+    <li routerLinkActive="active"><a routerLink="employees">Employes</a> </li>
+  </ul>
+
+
+  
+
+  <router-outlet></router-outlet>
 </div>
 
 
