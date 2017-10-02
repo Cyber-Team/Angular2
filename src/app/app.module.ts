@@ -15,6 +15,7 @@ import { AboutComponent } from './about/about.component';
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
   { path:'employees', component:EmployeeListComponent},
+  {path:'employees/code', component:EmployeComponent},
   {path:'about', component:AboutComponent},
   {path:'', redirectTo:'/home',pathMatch:'full'},
   {path:'**', component:NotfoundComponent}

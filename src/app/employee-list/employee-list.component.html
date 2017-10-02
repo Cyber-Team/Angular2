@@ -17,7 +17,9 @@
   <!--trackBy:trackByEmpCode; let i=index; let isFirst=first; let isLast=last;
      let isEven=even-->
     <tr *ngFor="let employee of employe;">
-        <td> {{employee.code | uppercase}}</td>
+       <td> <a [routerLink]="['employees',employee.code]">
+         {{employee.code | uppercase}}</a>
+       </td>
         <td> {{employee.name | employeeTitlePipe:employee.gender}}</td>
         <td> {{employee.gender }}</td>
        <!-- <td>{{ i }}</td>
