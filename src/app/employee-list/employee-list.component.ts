@@ -12,12 +12,10 @@ import { ActivatedRoute, Router } from "@angular/router";
 export class EmployeeListComponent implements OnInit {
   employe: any[];
   //dependency injection
- // private _UserprefrenceService: UserprefrenceService;
-
+  // private _UserprefrenceService: UserprefrenceService;
 
   //selectedEmployeCount: string = 'All';
   constructor( private _UserprefrenceService: UserprefrenceService,
-               private _activatedRoute: ActivatedRoute,
                private _route:Router) {
     //this._UserprefrenceService = new UserprefrenceService();
     this.employe = [
