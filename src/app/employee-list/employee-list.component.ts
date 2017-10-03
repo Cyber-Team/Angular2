@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Http} from '@angular/http';
+import { UserprefrenceService } from '../userprefrence.service';
 
 //import {EmployeeService } from './employee.service';
 @Component({
@@ -9,8 +10,13 @@ import {Http} from '@angular/http';
 })
 export class EmployeeListComponent implements OnInit {
   employe: any[];
+  //dependency injection
+ // private _UserprefrenceService: UserprefrenceService;
+
+
   //selectedEmployeCount: string = 'All';
-  constructor( ) {
+  constructor( private _UserprefrenceService: UserprefrenceService ) {
+    //this._UserprefrenceService = new UserprefrenceService();
     this.employe = [
       { code: 'em101', name: 'Tom', gender:'Male'},
       { code: 'em102', name: 'Alex', gender:'Male'},
@@ -31,6 +37,12 @@ export class EmployeeListComponent implements OnInit {
   /*trackByEmpCode(index:number, employe: any): string{
     return employe.code;
   }*/
+  get colour():string{
+    return this._UserprefrenceService.colorPrefrence;
+  }
+  set colour(value:string){
+    this._UserprefrenceService.colorPrefrence = value;
+  }
 
   getTotalEmployeCount(): number{
     return this.employe.length;

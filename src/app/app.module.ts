@@ -11,7 +11,7 @@ import { HttpModule } from '@angular/http';
 import { HomeComponent } from './home/home.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { AboutComponent } from './about/about.component';
-
+import { UserprefrenceService } from './userprefrence.service';
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
   { path:'employees', component:EmployeeListComponent},
@@ -39,7 +39,7 @@ const appRoutes: Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes,{useHash: true})
   ],
-  providers: [],
+  providers: [UserprefrenceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
