@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Http} from '@angular/http';
 import { UserprefrenceService } from '../userprefrence.service';
+import { ActivatedRoute, Router } from "@angular/router";
 
 //import {EmployeeService } from './employee.service';
 @Component({
@@ -15,7 +16,9 @@ export class EmployeeListComponent implements OnInit {
 
 
   //selectedEmployeCount: string = 'All';
-  constructor( private _UserprefrenceService: UserprefrenceService ) {
+  constructor( private _UserprefrenceService: UserprefrenceService,
+               private _activatedRoute: ActivatedRoute,
+               private _route:Router) {
     //this._UserprefrenceService = new UserprefrenceService();
     this.employe = [
       { code: 'em101', name: 'Tom', gender:'Male'},
@@ -54,7 +57,10 @@ export class EmployeeListComponent implements OnInit {
   TotalNumberOfFeMale(): number{
     return this.employe.filter(e => e.gender === "female").length;
   }
-
+  //to back to home page
+  onBackButtonClick():void{
+    this._route.navigate(['/home']);
+  }
   ngOnInit() {
   }
 
